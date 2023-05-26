@@ -7,6 +7,7 @@ class TaskProvider with ChangeNotifier {
   String description = '';
   String date = '';
   bool isCompleted = false;
+  int completedTasksCount = 0;
 
 
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -64,10 +65,24 @@ class TaskProvider with ChangeNotifier {
 
   void fetchTasks(String userId) {
     _tasksCollection.where('user', isEqualTo: userId)
-        .orderBy('isCompleted')
         .snapshots().listen((QuerySnapshot snapshot) {
       tasks = snapshot.docs;
+
+      // Debug prints to check fetched data
+      print("Fetched tasks: $tasks");
+
+      // Reset the count before calculating again
+      completedTasksCount = 0;
+
+      for (var task in tasks) {
+        if (task['isCompleted'] == true) {
+          completedTasksCount++;
+          print("Incrementing completed tasks count to $completedTasksCount");
+        }
+      }
+
       notifyListeners();
     });
   }
+
 }

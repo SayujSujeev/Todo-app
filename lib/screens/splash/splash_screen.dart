@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:todo_app/constants/colors.dart';
 
 import '../landing/landing_screen.dart';
 
@@ -56,6 +57,7 @@ class SplashScreenState extends State<AnimatedSplashScreen>
             children: <Widget>[
               Image.asset(
                 'assets/images/todologo.png',
+                color: primary,
                 width: animation.value * 250,
                 height: animation.value * 250,
               ),

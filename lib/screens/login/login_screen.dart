@@ -47,6 +47,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
             children: [
               Image.asset(
                 'assets/images/todologo.png',
+                color: primary,
                 height: 50,
                 width: 100,
               ),
@@ -72,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                       ),
                       const SizedBox(height: 20,),
                       SvgPicture.asset(
-                        'assets/images/checklist.svg',
+                        'assets/images/loginillu.svg',
                         width: 350,
                       ),
                     ],
@@ -115,7 +116,12 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                             padding: const EdgeInsets.symmetric(vertical: 20),
                             decoration: BoxDecoration(
                               color: primary,
-                              borderRadius: BorderRadius.circular(50),
+                              borderRadius: BorderRadius.circular(6),
+                                boxShadow: [BoxShadow(
+                                    color: black.withOpacity(0.5),
+                                    offset: const Offset(0,5),
+                                    blurRadius: 5
+                                )]
                             ),
                             child: const Center(
                               child: Text(
