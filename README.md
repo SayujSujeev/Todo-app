@@ -1,16 +1,14 @@
-# todo_app
+# ToDo app with firebase and custom animation
 
-A new Flutter project.
 
-## Getting Started
+![App UI](/scr1.jpg)
 
-This project is a starting point for a Flutter application.
+![App UI](/scr2.jpg)
 
-A few resources to get you started if this is your first Flutter project:
+![App UI](/scr3.jpg.)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![App UI](/scr4.jpg.)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![App UI](/scr5.jpg.)
+
+![App UI](/scr6.jpg.)
